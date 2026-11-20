@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — all 55 trophies</title>
+<meta name="description" content="An offline guide and progress tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <h1>GTA VI Trophy Guide <span>&amp; Tracker</span></h1>
+    <p class="sub">All 55 PlayStation 5 trophies — 1 platinum · 2 gold · 6 silver · 46 bronze. Works fully offline; your progress stays in this browser.</p>
+  </div>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-numbers"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-sub" id="progressSub">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button id="viewTracker" type="button" class="view-btn active" aria-pressed="true">Tracker</button>
+  <button id="viewRoadmap" type="button" class="view-btn" aria-pressed="false">Platinum roadmap</button>
+</nav>
+
+<section class="controls" aria-label="Filters">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide text…" autocomplete="off"></label>
+  <label>Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="mission">Strangers &amp; Freaks</option>
+      <option value="activity">Activities</option>
+      <option value="collectible">Collectibles</option>
+      <option value="crime">Crime</option>
+      <option value="exploration">Exploration</option>
+      <option value="completion">100% completion</option>
+      <option value="misc">Miscellaneous</option>
+      <option value="platinum">Platinum</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>State
+    <select id="state">
+      <option value="all">Earned &amp; remaining</option>
+      <option value="earned">Earned only</option>
+      <option value="remaining">Remaining only</option>
+    </select>
+  </label>
+  <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+  <label class="check" title="Hides the names and details of story trophies until you earn them"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+</section>
+
+<section class="actions" aria-label="Progress tools">
+  <button id="export" type="button">Export progress (.json)</button>
+  <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+  <button id="reset" type="button">Reset progress</button>
+  <span id="saveNote" class="save-note">Progress saves automatically in this browser.</span>
+</section>
+
+<p id="demoNote" class="demo-note" hidden>Demo data — a sample of earned trophies, shown for this screenshot. Your own progress is not affected.</p>
+
+<main>
+  <section id="trackerView" aria-label="Trophy tracker">
+    <p id="countLine" class="count-line"></p>
+    <ul id="trophyList" class="trophy-list"></ul>
+    <p id="emptyNote" class="empty-note" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="roadmapView" aria-label="Platinum roadmap" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">One playthrough, no online trophies, no difficulty settings and no mission replay — but free roam carries on after the story (GTABase). Around 200 hours in total (KeenGamer, GTABase). Save manually at the start and end of every chapter, and keep cheats off: they disable trophies and saving (GTABase).</p>
+    <ol id="roadmapList" class="roadmap-list"></ol>
+  </section>
+</main>
+
+<footer>
+  <h2>About &amp; sources</h2>
+  <p>Names, descriptions and grades are the official PlayStation list (55 trophies). Guide text is written for this app, in its own words. Where a trigger is still being confirmed by players, the guide says so instead of inventing a method. Sources consulted for the guides:</p>
+  <ul id="sourceList" class="source-list"></ul>
+  <p class="fine">Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. No logos or official artwork are used. Works offline: every file it loads lives in this folder.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
